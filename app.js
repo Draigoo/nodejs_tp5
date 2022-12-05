@@ -7,7 +7,7 @@ const indexRouter = require(path.join(__dirname,'routes/index.js'));
 const categoriesRouter = require(path.join(__dirname,'routes/categories.js'));
 const productRouter = require(path.join(__dirname,'routes/products.js'));
 const bp = require('body-parser')
-
+require('dotenv').config()
 
 app.use(morgan('tiny'));
 app.use(express.static("public"));
