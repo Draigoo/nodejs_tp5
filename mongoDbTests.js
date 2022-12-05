@@ -1,7 +1,7 @@
 const { MongoClient, ObjectId} = require('mongodb');
 
 const args = process.argv.slice(2);
-const url = args[0] ?? 'mongodb://127.0.0.1:27017';
+const url = args[0] ?? process.env.MONGODB_URI;
 const dbName = args[1] ?? "isen_drive";
 const client = new MongoClient(url);
 
